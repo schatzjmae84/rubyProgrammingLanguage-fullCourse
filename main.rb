@@ -46,3 +46,25 @@ puts ("I love " + celebrity)
 =end
 #
 
+#friends = Array["Rachel", "Monica", "Phoebe"]
+friends = Array.new
+
+friends[0] = "Rachel"
+friends[1] = "Monica"
+friends[2] = "Phoebe"
+
+puts friends.sort()
+
+states = {
+    :Pennsylvania => "PA",
+    "New York" => "NY",
+    "Oregon" => "OR"
+}
+puts states[:Pennsylvania]
+
+def sayhi(name, age=0)
+    puts ("Hello " + name + ", you are " + age.to_s)
+end
+
+sayhi("JoJo")
+
