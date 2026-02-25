@@ -44,7 +44,6 @@ puts ("Roses are " + color)
 puts (plural_noun + " are blue")
 puts ("I love " + celebrity)
 =end
-#
 
 #friends = Array["Rachel", "Monica", "Phoebe"]
 friends = Array.new
@@ -99,6 +98,7 @@ end
 
 puts max(100, 20, 3)
 
+=begin
 puts "Enter first number: "
 num1= gets.chomp().to_f
 puts "Enter the operator: "
@@ -117,3 +117,62 @@ elsif op == "/"
 else
     puts "Invalid operator"
 end
+=end
+#
+
+def get_day_name(day)
+    day_name = ""  
+
+    case day 
+    when "Mon"  
+        day_name = "Monday"
+    when "Tue"
+        day_name = "Tuesday"
+    when "Wed"
+        day_name = "Wednesday"
+    when "Thu"
+        day_name = "Thursday"
+    when "Fri"
+        day_name = "Friday"
+    when "Sat"
+        day_name = "Saturday"
+    when "Sun"
+        day_name = "Sunday"
+    else 
+        day_name = "Invalid abbreviation"
+    end
+
+    return day_name
+end
+
+puts get_day_name("dog")
+
+index = 1
+while index <= 5
+    puts index
+    index += 1      
+end
+
+secret_word = "narwal"
+guess = ""
+guess_count = 0
+guess_limit = 3
+out_of_guesses = false
+
+while guess != secret_word and !out_of_guesses
+    if guess_count < guess_limit
+      puts "Take a guess at the secret word!: "  
+      guess = gets.chomp()
+      guess_count += 1
+    else
+        out_of_guesses = true
+    end
+end
+
+if out_of_guesses
+    puts "Sorry! You are out of guesses."  
+else
+    puts "Congratulations! You've guessed the secret word."
+end
+
+
