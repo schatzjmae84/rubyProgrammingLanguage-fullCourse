@@ -118,7 +118,6 @@ else
     puts "Invalid operator"
 end
 =end
-#
 
 def get_day_name(day)
     day_name = ""  
@@ -153,6 +152,7 @@ while index <= 5
     index += 1      
 end
 
+=begin
 secret_word = "narwal"
 guess = ""
 guess_count = 0
@@ -174,5 +174,22 @@ if out_of_guesses
 else
     puts "Congratulations! You've guessed the secret word."
 end
+=end
 
+amigos = ["Krystle", "Megan", "Nia", "Lauren", "Mandy"]
 
+for amigo in amigos
+    puts amigo  
+end
+
+amigos.each do |amigo|
+    puts amigo  
+end
+
+for index in 0..5
+    puts index  
+end
+
+6.times do |index|
+    puts index
+end
