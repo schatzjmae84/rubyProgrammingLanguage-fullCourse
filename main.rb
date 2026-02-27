@@ -204,4 +204,21 @@ end
 
 puts pow(4, 3)
 
+File.open("giraffe.txt", "r") do |file|
+    puts file.read()  
+end
+
+File.open("giraffe.txt", "w") do |file|
+    file.write("\nI am learning how to append a file.")
+end
+
+File.open("index.html", "w") do |file|
+    file.write("<html>\n<head>\n<title>My Web Page</title>\n</head>\n<body>\n<h1>Welcome to My Web Page</h1>\n<p>This is a paragraph.</p>\n</body>\n</html>")
+end
+
+File.open("giraffe.txt", "r+") do |file|
+    puts file.readline()
+    file.write("\nI am learning how to write within a file.")
+end
+
 
